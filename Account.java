@@ -29,7 +29,24 @@ public class Account {
     }
   }
 
-  
+  //Function showing the previous transaction
+	void getPreviousTransaction() {
+		if (previousTransaction > 0) {
+			System.out.println("Deposited: " + previousTransaction);
+		} else if (previousTransaction < 0) {
+			System.out.println("Withdrawn: " + Math.abs(previousTransaction));
+		} else {
+			System.out.println("No transaction occurred");
+		}
+	}
+	
+	//Function calculating interest of current funds after a number of years
+	void calculateInterest(int years) {
+		double interestRate = .0185;
+		double newBalance = (balance * interestRate * years) + balance;
+		System.out.println("The current interest rate is " + (100 * interestRate) + "%");
+		System.out.println("After " + years + " years, you balance will be: " + newBalance);
+	}
 
 
 
