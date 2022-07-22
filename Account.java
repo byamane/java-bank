@@ -12,4 +12,25 @@ public class Account {
     customerName = cname;
     customerID = cid;
   }
+
+  // Function for depositing money
+  void deposit(int amount){
+    if (amount != 0) {
+      balance = balance + amount;
+      previousTransaction = amount;
+    }
+  }
+
+  // Function for withdrawing money
+  void withdraw(int amount){
+    if (amount != 0) {
+      balance = balance - amount;
+      previousTransaction = -amount;
+    }
+  }
+
+  
+
+
+
 }
